@@ -1,0 +1,8 @@
+<div align='center'>
+<% if @message.present? %>
+    <h1>Hello <%= @message %> !</h1>
+    <% else %>
+    <h1> Hello world !</h1>
+<% end %>
+</div>
+<%= link_to "Goodby", "/welcome/goodby?message=#{@message}", class: 'btn', id: 'toto' %>

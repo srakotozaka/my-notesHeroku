@@ -1,0 +1,13 @@
+<div align='center'><h1>Affichage des notes</h1></div>
+</br>
+<%= link_to "Nouvelle note", note_path("new"), class: 'btn btn-default btn-lg'%>
+<div align='left'>
+<% @result.each do |note| %>
+<h1>ID n°<%= note.id %>  
+"<%= note.title %>"</h1>
+<%= link_to "Détail id #{note.id}", note_path(note.id), class: 'btn'%>
+
+<% end %>
+</div>
+</br>
+<%= link_to "Nouvelle note", note_path("new"), class: 'btn btn-default btn-lg'%>

@@ -1,0 +1,9 @@
+<% if @result.present? %>
+<div align='center'><h1>Affichage de la note ID <%=@result.id %></h1></div>
+
+<div align='center'><%=@result.title %></div>
+<div align='center'><%=@result.content %></div>
+<% else %>
+<div align='center'><h1>Recherche non aboutie</h1></div>
+<% end %>
+<%= link_to "Retour", notes_path, class: 'btn'%>
